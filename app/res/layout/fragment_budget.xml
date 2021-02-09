@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:ems="10"
+            android:hint="Date"
+            android:inputType="date"
+            android:visibility="invisible"/>
+        <EditText
+            android:id="@+id/txtBudgetCategory"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:ems="10"
+            android:inputType="none"
+            android:contentDescription="Category"
+            android:hint="Category"
+            android:textIsSelectable="true"/>
+        <EditText
+            android:id="@+id/txtBudgetAmount"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:contentDescription="Amount"
+            android:hint="Amount"/>
+        <EditText
+            android:id="@+id/txtBudgetDescription"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:contentDescription="Description"
+            android:hint="Description"/>
+
+        <LinearLayout
+            android:id="@+id/btnBudgetSelector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="16dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/BudgetlayoutSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/btnBudgetSave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Save"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/BudgetlayoutUpDe"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/btnBudgetUpdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Update"
+                        android:textColor="@color/black"/>
+
+                    <Button
+                        android:id="@+id/btnBudgetDelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Delete"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BudgetRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:visibility="visible">
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:theme="@style/Theme.BudgetingApp.AppBarOverlay">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expense Category"
+                    android:padding="10dp"
+                    android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"/>
+            </com.google.android.material.appbar.AppBarLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCategorySelector"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Budgeting App</string>
+    <string name="tabDaily">Daily</string>
+    <string name="tabWeekly">Weekly</string>
+    <string name="tabMonthly">Monthly</string>
+    <string name="tabMainBudget">Budget</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="tabIncome">Income</string>
+    <string name="tabExpense">Expense</string>
+    <string name="tabBudget">Budget</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="Income">Income Category</string>
+    <string name="Expense">Expense Category</string>
+    <string name="Budget">Budget</string>
+
+
+</resources>
